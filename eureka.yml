@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka
+
+server:
+  port: ${PORT:8761}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    enable-self-preservation: true
+    wait-time-in-ms-when-sync-empty: 0
+
+logging:
+  level:
+    org.springframework:
+      boot: info
+    com.weproud: debug
